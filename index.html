@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="css/normalize.css"
+    />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="body">
+    <form class="form" method="post" action="">
+      <div class="form-header">
+        <div class="form-header__block summary">
+          <strong class="summary__title"
+            ><i class="fas fa-clipboard"></i>YOUR ORDER</strong
+          >
+
+          <dl class="details">
+            <div class="details__group">
+              <dt class="details__name">Items</dt>
+              <dd class="details__info">2 documnets</dd>
+            </div>
+
+            <div class="details__group">
+              <dt class="details__name">Details</dt>
+              <dd class="details__info">2 languages</dd>
+            </div>
+
+            <div class="details__group">
+              <dt class="details__name">Price</dt>
+              <dd class="details__info">$ 696.06</dd>
+            </div>
+
+            <div class="details__group">
+              <dt class="details__name">Delivery</dt>
+              <dd class="details__info">48 hours*</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="form-header__block">
+          <button class="button button--primary">Place order</button>
+          <button class="button" type="button">Print a quote</button>
+        </div>
+
+        <div class="form-header__block help">
+          <strong class="summary__title"
+            ><i class="far fa-life-ring"></i>HELP CENTER</strong
+          >
+
+          <p class="help__text">
+            If you need assistance while placing your order, contact one of our
+            beloved Project Manager by phone or email.
+          </p>
+
+          <address>
+            <a href="tel:+9710555555" class="help__link">+971 (0) 555 555</a>
+            <a href="mailto:help@qtest.com" class="help__link"
+              >help@qtest.com</a
+            >
+          </address>
+        </div>
+      </div>
+
+      <section class="section">
+        <fieldset class="fieldset fieldset--hero">
+          <legend class="legend">Select what you want to translate</legend>
+
+          <div class="type">
+            <label for="type_website" class="radio-button">
+              <input
+                type="radio"
+                name="ducument_type"
+                id="type_website"
+                class="visualy__hidden radio-button__input"
+                value="website"
+              />
+              <div class="radio-button__content radio-button__content--large">
+                <span>Website</span>
+              </div>
+            </label>
+
+            <label for="type_documents" class="radio-button">
+              <input
+                type="radio"
+                name="ducument_type"
+                id="type_documents"
+                class="visualy__hidden radio-button__input"
+                value="documents"
+                checked
+              />
+              <div class="radio-button__content radio-button__content--large">
+                <span>Documents</span>
+              </div>
+            </label>
+
+            <label for="type_social" class="radio-button">
+              <input
+                type="radio"
+                name="ducument_type"
+                id="type_social"
+                class="visualy__hidden radio-button__input"
+                value="social"
+              />
+              <div class="radio-button__content radio-button__content--large">
+                <span>Social account</span>
+              </div>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="fieldset fieldset--number">
+          <legend class="legend">
+            Upload your documents<small class="small"
+              >(Doc, Docx, Text, PDF, Markdown)</small
+            >
+          </legend>
+
+          <input
+            type="file"
+            name="file_upload"
+            id="file_upload"
+            class="visualy__hidden file-upload__input"
+          />
+          <label
+            for="file_upload"
+            class="form-input form-button file-upload__label"
+          >
+            <i class="fas fa-cloud-upload-alt"></i> Upload a new file
+          </label>
+
+          <div class="table">
+            <div class="row row__header">
+              <div class="col-3">FILE NAME</div>
+              <div class="col-2">FILE SIZE</div>
+              <div class="col-2">NUMBER OF WORDS</div>
+              <div class="col-1 col--center">REMOVE</div>
+            </div>
+
+            <div class="row">
+              <div class="col-3">
+                <i class="fas fa-file-alt"></i> business_operations.docx
+              </div>
+              <div class="col-2">78kb</div>
+              <div class="col-2">842</div>
+              <div class="col-1 col--center">
+                <button
+                  type="button"
+                  class="form-button form-button--small form-button--transparent"
+                  title="Delete"
+                >
+                  <i class="fas fa-trash"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-3">
+                <i class="fas fa-file-alt"></i> business_financial.docx
+              </div>
+              <div class="col-2">26kb</div>
+              <div class="col-2">2,326</div>
+              <div class="col-1 col--center">
+                <button
+                  type="button"
+                  class="form-button form-button--small form-button--transparent"
+                  title="Delete"
+                >
+                  <i class="fas fa-trash"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="fieldset fieldset--number">
+          <legend class="legend">Choose your languages pairings</legend>
+
+          <div class="row">
+            <label for="language_from" class="form-label">From</label>
+            <select
+              name="language_from"
+              id="language_from"
+              class="form-input form-input__select"
+              required
+            >
+              <option value="" disabled selected></option>
+              <option value="english">English</option>
+            </select>
+          </div>
+
+          <div class="row">
+            <label for="language_to_1" class="form-label">To</label>
+            <select
+              name="language_to_1"
+              id="language_to_1"
+              class="form-input form-input__select"
+              required
+            >
+              <option value="" disabled></option>
+              <option value="english">Arabic</option>
+            </select>
+
+            <select name="" id="" class="form-input form-input__select">
+              <option value="" disabled></option>
+              <option value="english">Kurdish</option>
+            </select>
+
+            <button
+              type="button"
+              class="form-button form-button--small form-button--transparent"
+              title="Delete"
+            >
+              <i class="fas fa-trash"></i>
+            </button>
+
+            <button type="button" class="form-input form-button" title="Add">
+              <i class="fas fa-plus"></i> Add
+            </button>
+          </div>
+        </fieldset>
+
+        <fieldset class="fieldset fieldset--number fieldset--small">
+          <legend class="legend">Select your desired tone</legend>
+
+          <label for="tone_casual" class="radio-button">
+            <input
+              type="radio"
+              name="tone_type"
+              id="tone_casual"
+              class="visualy__hidden radio-button__input"
+              value="casual"
+              required
+            />
+            <div class="radio-button__content radio-button__content--small">
+              <i class="fas fa-comments"></i>
+              Friendly / Casual
+            </div>
+          </label>
+
+          <label for="tone_pro" class="radio-button">
+            <input
+              type="radio"
+              name="tone_type"
+              id="tone_pro"
+              class="visualy__hidden radio-button__input"
+              value="corporate"
+              required
+            />
+            <div class="radio-button__content radio-button__content--small">
+              <i class="fas fa-suitcase"></i>
+              Corporate / Pro
+            </div>
+          </label>
+
+          <label for="tone_formal" class="radio-button">
+            <input
+              type="radio"
+              name="tone_type"
+              id="tone_formal"
+              class="visualy__hidden radio-button__input"
+              value="formal"
+              required
+            />
+            <div class="radio-button__content radio-button__content--small">
+              <i class="fas fa-bullhorn"></i>
+              Media / Formal
+            </div>
+          </label>
+        </fieldset>
+
+        <fieldset class="fieldset fieldset--number fieldset--small">
+          <legend class="legend">Tell us how urgent this job is</legend>
+
+          <div class="range">
+            <input type="range" class="range__input" min="0" max="2" step="1" />
+            <div class="range__labels">
+              <ul>
+                <li>I GOT TIME</li>
+                <li>AVEARGE</li>
+                <li>YESTERDAY</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="info">
+            <strong><i class="fas fa-info-circle"></i>Timeline info</strong>
+            <p>
+              With an <strong class="">AVERAGE</strong> timeline set up, our
+              expert translator can take a reasonable amount of time perfecting
+              your translation
+            </p>
+          </div>
+        </fieldset>
+
+        <fieldset class="fieldset fieldset--number">
+          <legend class="legend">Sign up and choose a payment method</legend>
+
+          <div class="row">
+            <p class="fieldset__text">
+              Already have an account with us? <a href="">Sign in</a>
+            </p>
+          </div>
+
+          <div class="row">
+            <div class="form-group">
+              <label for="name" class="form-label">FULL NAME</label>
+              <input
+                type="text"
+                name="user_name"
+                id="name"
+                class="form-input form-input--validate form-input--long"
+                placeholder=" "
+                required
+              />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group">
+              <label for="email" class="form-label">EMAIL ADDRESS</label>
+              <input
+                type="email"
+                name="user_email"
+                id="email"
+                class="form-input form-input--validate form-input--long"
+                placeholder=" "
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="password" class="form-label">CHOOSE A PASSWORD</label>
+              <input
+                type="password"
+                name="user_password"
+                id="password"
+                class="form-input form-input--validate form-input--long"
+                placeholder=" "
+                required
+                pattern=".{4,16}"
+                title="4 characters minimum"
+              />
+            </div>
+          </div>
+
+          <div class="row row--spaced">
+            <label
+              for="payment_cc"
+              class="radio-button radio-button--space-right"
+              title="CC"
+            >
+              <input
+                type="radio"
+                name="payment_type"
+                id="payment_cc"
+                class="visualy__hidden radio-button__input"
+                checked
+                required
+              />
+              <div class="radio-button__content radio-button__content--medium">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+              </div>
+            </label>
+
+            <label
+              for="payment_paypal"
+              class="radio-button radio-button--space-right"
+              title="PayPal"
+            >
+              <input
+                type="radio"
+                name="payment_type"
+                id="payment_paypal"
+                class="visualy__hidden radio-button__input"
+                required
+              />
+              <div class="radio-button__content radio-button__content--medium">
+                <i class="fab fa-cc-paypal"></i>
+              </div>
+            </label>
+
+            <label
+              for="payment_amazon"
+              class="radio-button radio-button--space-right"
+              title="Amazon Pay"
+            >
+              <input
+                type="radio"
+                name="payment_type"
+                id="payment_amazon"
+                class="visualy__hidden radio-button__input"
+                required
+              />
+              <div class="radio-button__content radio-button__content--medium">
+                <i class="fab fa-cc-amazon-pay"></i>
+              </div>
+            </label>
+          </div>
+
+          <div class="row">
+            <div class="form-group">
+              <label for="card_number" class="form-label">CARD NUMBER</label>
+              <div class="form-input--icon">
+                <input
+                  type="text"
+                  name="card_number"
+                  id="card_number"
+                  class="form-input form-input--xlong"
+                  required
+                  pattern="[0-9]{12,19}"
+                  title="Input valid CC number, 12-19 digits lenght"
+                />
+                <i class="fab fa-cc-visa"></i>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="card_number" class="form-label">EXPIRY DATE</label>
+              <input
+                type="date"
+                name="card_number"
+                id="card_number"
+                class="form-input"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="card_number" class="form-label">CODE</label>
+              <input
+                type="text"
+                name="card_number"
+                id="card_number"
+                class="form-input"
+                required
+                pattern="[0-9]{3,4}"
+                title="Input valid CVV code, 3-4 digits lenght"
+              />
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="form-footer">
+          <label for="terms" class="terms footer__element">
+            <input type="checkbox" name="terms" id="terms" required />
+            I agree to the <a href="">Terms &amp; Conditions</a>
+          </label>
+
+          <button class="button button--primary footer__element">
+            Place order
+          </button>
+          <button type="button" class="button footer__element">
+            Print a quote
+          </button>
+        </div>
+      </section>
+    </form>
+  </body>
+</html>
