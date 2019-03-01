@@ -18,3 +18,7 @@
     background-color: darken($color: #f7f7fa, $amount: 10%);
   }
 }
+
+@mixin focus-outline {
+  box-shadow: 0 0 0 0.2rem rgba($color: #268fff, $alpha: 0.5);
+}

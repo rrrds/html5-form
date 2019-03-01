@@ -47,11 +47,31 @@
   border: none;
   color: $text-color-second;
 
-  &:hover, &:active {
+  &:hover,
+  &:active {
     background-color: transparent;
   }
 }
 
 .form-button--small {
   min-width: 50px;
+}
+
+.file-upload__label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 25px 0;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: fit-content;
+
+  .file-upload__input:focus + & {
+    @include focus-outline;
+  }
+  
+  .fas {
+    margin-right: 0.5em;
+    font-size: 1.2em;
+  }
 }
